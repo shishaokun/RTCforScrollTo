@@ -8,6 +8,9 @@ balabala. 基于ScrollTo的html5ppt展示框架的手势识别展示框架.
 ##使用
 
 1. 方法安装node，以及依赖
+``` javascript
+npm install
+```
 
 
 2. 进入命令行 输入
