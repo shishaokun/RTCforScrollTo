@@ -1,0 +1,222 @@
+@charset "utf-8";
+body{
+	font-family: serif "微软雅黑" ;
+	margin: 0;
+	min-width: 980px;
+	padding: 0;
+	color: #444;
+}
+
+p{
+	margin: 0 0 20px 0;	
+}
+
+p, ul{
+	font-size: 2em;
+	font-weight:200;
+	font-style:normal;
+}
+strong {
+	font-size: 2.2em;
+	display: block;
+	text-shadow: 1px 1px 3px #444;
+}
+
+img{
+	border: 0;
+}
+
+h2{
+	font-size: 4em;
+	font-weight:600;
+	font-style:normal;
+	text-shadow: 1px 1px 3px #555; 
+}
+a {
+	color: #098EDA;
+	display: block;
+	text-indent: 20px;
+	cursor: pointer;
+}
+
+#header h1, #pixels{
+	/*color: #48941A;*/
+}
+
+#nav{
+	list-style: none;
+	position: fixed;
+	right: 20px;
+}
+
+#nav li{
+	margin: 0 0 15px 0;	
+}
+
+#nav a {
+	width: 15px;
+	height: 15px;
+	display: block;
+	overflow: hidden;
+	border-radius: 50%;
+	background: #ddd;
+	border: 1px solid #aaa;
+}
+
+#nav a:hover {
+	background: #ddd;
+	box-shadow: inset 0px 0px 3px #777;
+}
+
+.float-left{
+	float: left;
+	text-align: left;
+}
+
+.float-right{
+	float: right;
+	text-align: right;
+}
+
+.center{
+	font-size: 2.5em;
+	padding: 80px 0 0 0;
+	text-align: center;
+}
+.scroll-box {
+	width: 90%;
+	margin: 0;
+	padding: 100px 5%;
+	overflow: hidden;
+	text-align: center;
+}
+.story{
+	margin:0 auto;
+	overflow: hidden;
+	width: 95%;
+	height: 100%;
+	position: relative;
+}
+
+.story .float-left, .story .float-right{
+	width: 90%;	
+}
+.bg {
+	width: 50%;
+	height: 50%;
+}
+
+#intro{
+	background: #5A9B37 url(../images/go.gif)  no-repeat fixed;
+	color: #eee
+}
+#intro .story {
+	margin: 10% auto 0;
+	width: 80%;
+	height: 80%;
+}
+#what{
+	background: #fff fixed;
+	color: #333;
+	text-shadow: 1px 1px 1px #444;
+	text-align: left;
+}
+#what .bg {
+	background: #fff url(../images/html5.jpg) no-repeat fixed;
+	position: absolute;
+	top: 10%;
+	right: 10%;
+	width: 50%;
+}
+#what h2 {
+	color: #333;
+	margin-bottom: 10px
+}
+#what p {
+	margin-left: 40px;
+	padding: 10px;
+}
+#what .story {
+	/*margin: -100px auto;
+	height: 100%;
+	padding: 10% 0;
+	overflow: hidden;*/
+}
+#what div {
+	width: 100%;
+	position: relative;
+}
+#what p {
+	font-size: 1.9em;
+	line-height: 150%;
+}
+#why{
+	background: #CC282F url(../images/whyit.jpg) 60% 0 no-repeat fixed;
+	color: white;
+}
+#why .float-right {
+	width: 70%;
+	text-align: left;
+}
+#how {
+	overflow: hidden;
+	background: #fff url(../images/whynot.jpg) no-repeat fixed;
+}
+
+#webrtc{
+	background: #3288d8 url(../images/webrtc.png) no-repeat fixed;
+	color: #eee
+}
+#html5 {
+	background: #fff  fixed;
+	text-shadow: 1px 1px 3px #444;
+}
+#thank {
+	background: #CC282F url(../images/eric.png) no-repeat fixed;
+}
+.story .width100 {
+	width: 50%;
+}
+.story .tips {
+	font-size: 1.9em;
+	font-weight: bold;
+	color: #444;
+	text-align: center;
+	display: block;
+	margin: 50px auto 0
+}
+.pic {
+	float: right;
+}
+.thank {
+	width: 100%;
+	margin: 10px auto;
+	text-align: center;
+}
+.show-cam {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 50px;
+}
+.set-cam {
+	width: 200px;
+	line-height: 50px;
+	background: #999;
+	border: 1px solid #aaa;
+	outline: none;
+	display: block;
+	cursor: pointer;
+	position: absolute;
+	left: 50%;
+	top: 0px;
+	margin-left: -100px;
+}
+h1 {
+	font-size: 6em;
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	color: #000;
+	text-shadow: 0px 0px 3px #333;
+}

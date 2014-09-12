@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>HTML5-webRTC</title>
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+ <link href="css/style.css" rel="stylesheet" type="text/css"> 
+ 
+  <script src="js/js/jquery.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="js/js/jquery.parallax-1.1.3.js"></script>
+  <script type="text/javascript" src="js/js/jquery.localscroll-1.2.7-min.js"></script>
+  <script type="text/javascript" src="js/js/jquery.scrollTo-1.4.2-min.js"></script>
+  <script type="text/javascript" src="js/js/jquery.inview.js"></script>
+  <script type="text/javascript" src="js/js/webrtc.js"></script>
+   <script type="text/javascript" src="js/js/go2hell.js"></script>
+
+  <script type="text/javascript">
+
+  $(document).ready(function(){
+
+    $('.scroll-box').height($(window).height() - 200);
+
+    $('#nav').localScroll(500);
+    
+    $('#intro').parallax("10%", "10",0.4);
+    $('#what').parallax("20%", "0",0.1);
+    $('#what .bg').parallax("80%","50", 0.4);
+    $('#why').parallax("-20%", "0",0.3);
+	$('#how').parallax("-10%","0",0.4);
+    $('#webrtc').parallax("90%","20",0.2);
+	$('#html5').parallax("0","0",0.5);
+	$('#thank').parallax("-10%","20",0.2);
+    
+
+    
+
+    $(window).bind('keyup',function(e){
+      e.preventDefault();
+      console.log(e.keyCode)
+      if(e.keyCode == '40' || e.keyCode == '32' ||  e.keyCode == '13') {
+        go2hell.navigateDown()
+      }
+      if(e.keyCode == '38') {//up
+          go2hell.navigateUp()
+      }
+      e.stopPropagation();
+    });
+
+    $.add
+  });
+
+  </script>
+
+</head>
+
+<body>
+ <ul id="nav">
+  <li><a href="#intro" title="Next Section"></a></li>
+  <li><a href="#what" title="Next Section"></a></li>
+  <li><a href="#why" title="Next Section"></a></li>
+  <li><a href="#how" title="Next Section"></a></li>
+  <li><a href="#webrtc" title="Next Section"></a></li>
+  <li><a href="#html5" title="Next Section"></a></li>
+ <li><a href="#thank" title="Next Section"></a></li>
+</ul>
+
+<div id="intro" class="scroll-box" >
+  <div class="story">
+    <div class="float-right">
+      <h2>HTML5 ---- on the way</h2>
+      <p>author : shaokun.shi</p>
+      <p>e-mail : shaokun.shi@renren-inc.com</p>
+    </div>
+  </div>
+</div>
+
+<div id="what" class="scroll-box">
+  <div class="story">
+	<div class="bg"></div>
+    <div>
+      <h2>Is It Mr. Right?</h2>
+      <strong>the good part : Beautiful && Sexy && Powerful</strong>
+      <p>Beautiful: CSS3、Canvas、WebGL</p>
+	<p>Sexy:多媒体、语意化标签、Form表单的扩展、离线应用</p>
+	<p>Powerful:Web Worker(类多线程处理)、Web Socket</p>
+      <strong>the bad part : 性、功、能、障碍</strong>
+      <p>性能：和各种强大的Native展现层技术相比，差距很大</p>
+	<p>工具：现今的工具还不能良好的提供开发者一个集成且多功能的工具，尤其在游戏开发中</p>
+	<p>能力：相比与native的差距还是很大的，html的API有900+，而native有近4000+</p>
+    </div>
+  </div>        
+</div>
+
+
+
+<div id="why" class="scroll-box">
+  <div class="story">
+    <div class="float-right">
+	<h2>What a webRTC !</h2>
+	<p>webRTC : 网页实时通信（Web Real-Time Communication）</p>
+      <p>是一个支持网页浏览器进行实时语音对话或视频对话的API。促进实时、基于浏览器的视频通信，旨在创造一个几乎所有上网设备（比如电话、电视和计算机）都可以在一个共同的平台上相互通信的环境。</p>
+      <p>谷歌2010年以6820万美元收购Global IP Solutions公司而获得的一项技术</p> 
+      <p>于2011年6月1日开源并在Google、Mozilla基金会、Opera支持下被包括进万维网联盟的W3C推荐标准</p>           
+      <p>W3C等组织正在制定Javascript 标准API，目前是WebRTC 1.0版本，Draft状态</p>
+    </div>
+  </div>
+</div>
+
+<div id="how" class="scroll-box">
+  <div class="story">
+    <div class="float-right">
+      <h2>What a webRTC</h2>
+      <video id="showCam" class="show-cam"></video>
+      <button id="setCam" class="set-cam">go to hell</button>       
+    </div>
+  </div>
+</div>
+
+<div id="webrtc" class="scroll-box">
+  <div class="story">
+    <div class="float-left">
+      <h2>the future of webRTC </h2>
+      <p>传统的浏览器之间的通信：两条信道、带宽限制、不支持流媒体</p>
+	<p>webRTC是peer2peer的信道，不经过服务器中转</p>
+	<p>webRTC不能建立信道，所以需要服务器参与建立信道：</p>
+	<p style="margin-left: 30px">1. 浏览器之间交换建立通信的元数据（信令）必须通过服务器 2.服务的扩展 3. NAT/防火墙穿越 4. 如果点对点通信建立失败，可以作为中转服务器</p>
+	<p>FireFox、Chrome、Opera等更多的浏览器在支持webRTC（Opera已经转投webkit了）</p>
+	</div>	
+  </div>
+</div>
+<div id="html5" class="scroll-box">
+  <div class="story">
+    <div class="float-left">
+      <h2>the future of html5 </h2>
+      <p>html5还有很多待修正的地方，草案也是一步步的改进。走到最后，始终会有一些应用或是功能不适合用html5来实现。</p>
+	<p>native还是html5其实已经不重要了，产品的核心应该是让用户舒服的获取想要的东西。</p>
+	<p>结合native的API的nativeJS，Hybrid在未来两三年会是一个趋势。</p>
+  </div>
+</div>
+</div>
+<div id="thank" class="scroll-box">
+  <div class="story">
+    <div>
+      <h1>Thanks</h1>
+  </div>
+</div>
+</div>
+
+
+<style>
+#comp{
+ position:fixed;
+ left:0;
+ top:0;
+ width:100%;
+ height:100%;
+ z-index: -1;
+}
+</style>
+<div id="disp"><canvas id="comp"></canvas></div>
+<video id="video" autoplay width="300" style="display:none"></video>
+<canvas id="canvas" style="width:300px;display:none;"></canvas>
+<script src="js/gesture.js"></script>	<!--  webRTC  -->
+</body>
+</html>
