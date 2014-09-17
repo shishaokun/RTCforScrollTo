@@ -26,4 +26,4 @@ node plugin/notes-server
 =============
 
 741653990@qq.com
-www.disanxian.com
+http://wordpress.disanxian.net
